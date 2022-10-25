@@ -26,5 +26,6 @@ function contarItensDaLista(){
 }
 
 function teste(){
-
+//teste mais um teste mais um tes
+let = var 78;
 }
