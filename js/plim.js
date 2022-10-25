@@ -24,3 +24,7 @@ function contarItensDaLista(){
     const cores = ["azul","amarelo","vermelho","verde","laranja","roxo"];
     document.getElementById("demo").innerHTML = "A lista tem " + cores.length + " item(s)";
 }
+
+function teste(){
+
+}
