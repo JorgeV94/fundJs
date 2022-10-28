@@ -1,3 +1,21 @@
+//declaração de um objeto
+let pessoa = {
+    nome : "Juca",
+    sobrenome :"Pirama",
+    idade: 30,
+    vip: true,
+    saudacao: function(){
+        return "Oi " + this.nome +" " + this.sobrenome;
+    },
+    sauda: function(){
+        document.getElementById("demo").innerHTML = "Oi " + this.nome +" " + this.sobrenome;
+    }
+};
+
+
+
+
+
 
 function myFunction() {
 	let i = 0;
@@ -71,4 +89,43 @@ function sortearListaDecrescente() {
     alunos.reverse();//inverte a lista 
     document.getElementById("demo").innerHTML = alunos;
 
+}
+
+function saudarPessoa() {
+    document.getElementById("demo").innerHTML = "oi " + pessoa.nome + " " + pessoa.sobrenome;
+    
+}
+
+function saudarPessoaFuncaoObjeto(){
+    document.getElementById("demo").innerHTML = pessoa.saudacao();
+
+}
+
+function saudarPessoaMetodoObjeto(){
+    pessoa.sauda();
+}
+
+class Pessoa{
+    constructor(nome="Maria", sobrenome="Antonieta", idade=25, vip=true){
+        //atributos
+        // this.nome = "Maria";
+        // this.sobrenome = "Antonieta";
+        // this.idade = "25";
+        // this.vip = false;
+
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = idade;
+        this.vip = vip;
+
+        //Metodos e Funçoes
+    }
+    saudacoes(){
+        document.getElementById("demo").innerHTML = "Ola " + this.nome +" " + this.sobrenome;
+    }
+}
+
+function saudarPessoaClasse(){
+    let aluna = new Pessoa("Beatriz","Gouveia",22,true);
+    aluna.saudacoes();
 }
